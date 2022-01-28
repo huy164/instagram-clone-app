@@ -25,6 +25,7 @@ const Stack = createStackNavigator();
 
 export default class App extends Component {
   constructor(props) {
+    super();
     this.state = {
       loaded: false,
     }
@@ -47,7 +48,7 @@ export default class App extends Component {
   }
 
   render() {
-    const { loggedIn, logIn } = this.state;
+    const { loggedIn, loaded } = this.state;
 
     if (!loaded) {
       return (
